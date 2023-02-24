@@ -1,0 +1,67 @@
+\documentclass[a4paper,12pt,twoside]{book}
+\usepackage{lesi/lesi}
+
+
+\title{Projeto de Desenvolvimento de Software}
+\author{José Macedo, 12939 \AND Daniel Vilaça, 16939 \AND  Vitor Sá, 20484 \AND João Machado, 21151 \AND Jonatas de Paula, 22562}
+\LESI
+\regimePosLaboral
+\date{\today}
+
+\orientador{Nuno Rodrigues}
+
+% comentar se não for para usar glossários
+%\makeglossaries
+
+
+% inicio do documento
+\begin{document}
+%\input{glossario}
+\input{acronimos}
+
+\frontmatter
+\maketitle  % print the title
+
+\begin{resumo}
+Fazer um pequeno resumo sobre o projeto...
+\end{resumo}
+
+\tableofcontents
+
+% comentar se nao tiver figuras
+\listoffigures
+\addcontentsline{toc}{chapter}{Lista de Figuras}
+
+% Commentar proximas duas linhas se nao for para usar acronimos
+\printglossary[type=\acronymtype,title={Siglas \& Acrónimos},toctitle={Siglas \& Acrónimos}]
+
+% Commentar proximas duas linhas se nao for para usar glossarios
+\printglossary[title={Indice de Termos},toctitle={Indice de Termos}]
+
+% comentar se nao se quiser lista de listagens
+%\lstlistoflistings
+%\addcontentsline{toc}{chapter}{Lista de Código}
+
+% comentar se não for para usar bibliografia
+%\bibliography{biblio}
+%\addcontentsline{toc}{chapter}{Bibliografia}
+
+\mainmatter
+
+% introdução
+\input{chap100}
+
+% Release Especificação
+\input{chap200}
+
+% Release Alpha
+\input{chap300}
+
+% Release Beta
+\input{chap400}
+
+% Release ready to web
+\input{chap500}
+
+
+\end{document} 

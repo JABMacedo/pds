@@ -1,0 +1,12 @@
+Antes de commit:
+
+- git stash -u
+- git pull --rebase
+- git stash pop
+
+Commit:
+
+- git add* (ou usar git GUI ou usar VSCODE etc)
+- git commit -u "qualquer coisa"
+- git push
+
