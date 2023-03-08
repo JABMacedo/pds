@@ -1,11 +1,13 @@
 Antes de commit:
+Puxar material:
 
 - git stash -u
-- git pull --rebase
+- git pull 
 - git stash pop
 
 Commit:
 
+- usar GIT GUI
 - git add* (ou usar git GUI ou usar VSCODE etc)
 - git commit -u "qualquer coisa"
 - git push
