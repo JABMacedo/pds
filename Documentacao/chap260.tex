@@ -1,0 +1,22 @@
+\section{Diagrama de Atividades}
+
+Através dos diagramas de atividades a seguir representados, podemos ilustrar e entender melhor o fluxo de trabalho entre o user e o sistema, assim como melhor entender a lógica do funcionamento do mesmo.
+
+imagem atividade user
+
+Pelo diagrama acima apresentado, podemos ver que o utilizador pode utilizar o sistema com ou sem login, porém apenas com o login executado é possivel ao mesmo usufruir de todas as vantágens do web-service. O mesmo é aplicado a todos os outros users, apenas com o login é possivel desbloquear todas as funcionalidades disponiveis.
+No caso do utilizador podemos ver que as opções são maioritáriamente de consulta, permitindo ao mesmo fazer uma gestão pessoal dos livros requisitados, coimas e ver todos os livros disponiveis.
+O utilizador, enquanto aluno, pode, dentro de todos estes campos, realizar ações mais aprofundadas como a realizar a requisição de um determinado livro, e anular ou alterar a data da mesma até 24horas antes da data de levantamento e fazer o pagamento de multas.
+A devolução do exemplar é feita de forma fisica, e é registada pelo funcionario ou admin.
+
+imagem atividade funcionario
+
+Com base no diagrama de atividade do funcionário, presente acima, é possivel observar que o mesmo possui um esquema identico ao do utilizador com apenas algumas adições e ligeiras alterações.
+Um bom exemplo de uma alteração é quando observamos a consulta de requisições, já não sendo necessário o prazo de até 24h.
+Quanto a funcionalidades adicionais, as principais são relativas aos exemplares/livros, o funcionario pode alertar o admin quanto ao estado de um determinado exemplar para que o admin possa proceder quanto ao tratamento dessa informação da melhor forma, e pode também alterar certos dados do livro, como o titulo, descrição, entre outros.
+
+imagem admin
+
+Como era de esperar, o administrador da biblioteca, ou qualquer user com o tipo admin, ter acesso ao maior numero de funcionalidades e maior liberdade de manipulação de dados.
+O Admin pode realizar a eliminação de exemplares e livros, alterações manuais aos seus estados, assim como anular coimas, anular/alterar requisições, entre outras.
+A maioria das funcionalidades são identicas para todos os utilizadores como o registo de uma requisição, a forma como as mesmas são geridas, consulta dos livros, consulta das coimas e a gestão das mesmas, sendo apenas aplicadas determinadas regras de negócio que permitem a existencia de uma hierarquia de ações que podem, se mal geridas, corromper todo o sistema.
