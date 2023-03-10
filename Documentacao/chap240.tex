@@ -1,0 +1,18 @@
+\section{Diagrama de Entidade Relações}
+
+De forma a garantir um bom funcionamento e estabilidade para o sistema, é necessário desenvolver uma base de dados com capacidade de gestão e armazenamento de todos os dados, não apenas necessários para as requisições definidas inicialmente como também para uma possivel futura adição.
+Para garantir isso realizamos o seguinte diagrama de entidade - relações, ou ER.
+
+imagem
+
+Neste sistema, e com as atuais requisições as tabelas principais deste diagrama são as tabelas, "User", "Requisição", "Multa" e "Livro", que interligam-se e complementam-se com outras tabelas mais pequenas ou intermediárias na comunicação entre duas das principais.
+
+Como podemos observar na imagem, relativamente ao Utilizador, o mesmo possui uma serie de Atributos como o nome, email, password... e 2 chaves estrangeiras que apontam para 2 outras tabelas, "Curso" e "User_Tipo" que armazenam todos os cursos e todos os possiveis tipos de user.
+Observamos então que a tabela "User" se encontra diretamente conectada com a tabela "Requisição" sendo o "codUser" (chave primária da tabela User) uma chave estrangeira nessa tabela para garantir que a requisição se mantem relacionada com apenas um utilizador de forma mais automatizada e consistente.
+A tabela "Requisição", também se relaciona com a tabela "Multa", é da tabela "Requisição" que será verificada a necessidade de aplicação de uma multa e calculado o custo da mesma com base nos dias em atraso, estes dados sao armazenados na tabela "Multa" interligada com  a tabela Requisição pela chave estrangeira "codRequisicao".
+Para ser feito o pagamento da multa, ligamos a tabela "Multa" à tabela "Pagamento" que por sua vez se liga à tabela "Multibanco" e "MbWay", isto foi feito para que para cada multa fosse guardado apenas um Pagamento e os dados relativos ao mesmo, desta forma evita-se melhor o registo de 2 pagamentos por Multa e também podemos verificar estatisticamente o metodo mais utilizado de forma mais simples, com uma comparação entre as tabelas "MbWay" e "Multibanco" e observando qual tem o maior numero de registos.
+
+Relativamente à tabela "Livro", a mesma está ligada à tabela "Exemplar", a tabela "Livro" armazena todos os dados de um titulo, a tabela "Exemplar", por sua vez, armazena todos os dados adicionais de um determinado volume.
+Ambas as tabelas acima referidas estão ligadas a duas tabelas mais simples e pequenas respetivamente. A tabela "Livro" está ligada à tabela "Livro_Tipo" de onde herda uma chave estrageira que aponta para o tipo de livro que é (ex: Romance, Ação, Ficção). A tabela "Exemplar, por sua vez, está ligada à tabela "Estado" de onde herda a chave estrangeira "codEstado" que aponta para o estado do exemplar (perdido, novo, como novo, com marcas de uso...).
+
+Todas estas tabelas possuem uma parte importante para garantir um bom funiconamento de todas as requisições e como tal nenhuma das mesmas pode ser deixada de parte.
