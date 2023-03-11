@@ -61,4 +61,6 @@ Thumbs.db
 *.lof
 *.out
 *.toc
+*.pdf
+*.gz
 

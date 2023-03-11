@@ -1,0 +1,22 @@
+\section{Diagrama de Estados}
+
+\par O diagrama de estado representa os possíveis estados, sendo alterado pelas operações que são executados dentro do sistema I-Library.
+
+\subsection{\labeltext[Diagrama de Estados - Levantamento]{Diagrama de estados - Levantamento}{es:250}}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{./img/Diagrama_E/DE_Requisicao.png}  % largura percentual 
+	\caption{\ref{es:250}}
+	\label{fig:chap250}
+\end{figure}
+
+\par O diagrama de “Levantamento” inicia no estado "Realiza login", na falha de login o estado altera para “Contactar Administrador” e, após o processo finaliza, no caso de os dados estarem corretos o estado altera para “Consulta Livros”, após a ação do usuário o estado altera para “Verificar Disponibilidade”, deste momento, temos dois estados distintos, ou seja, caso tenha disponibilidade o estado altera para “Reserva Futuras” e após para “Levanta Livro”, neste sentido o estado finaliza, no caso de não haver disponibilidade o estado para altera para o fim.
+
+%DE_Devolução
+\input{chap251}
+\newpage
+
+%DE_Pagamento
+\input{chap252}
+\newpage
